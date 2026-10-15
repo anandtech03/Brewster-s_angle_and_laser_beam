@@ -19,18 +19,13 @@ The project provides a virtual demonstration of the experiment to make the under
 |:--|:--|
 | **Name of Developer** | Anand  |
 | **Institute** | Rajkiya Engineering College, Banda |
-
-| **Email ID** | Your email address |
-
 | **Email ID** | anandakkumar81@gmail.com |
-
 | **Department** | Information Technology |
 
 ### Contributors List
 
 | Sr. No. | Name | Faculty or Student | Department | Institute | Email ID |
 |:--:|:--|:--|:--|:--|:--|
-| 1 | Anand Kumar | Student | Information Technology | Rajkiya Engineering College, Banda | Your email address |
 | 1 | Anand Kumar | Student | Information Technology | Rajkiya Engineering College, Banda | anandakkumar81@gmail.com  |
 | 2 | Contributor Name | Student/Faculty | Department Name | Institute Name | Email Address |
 
