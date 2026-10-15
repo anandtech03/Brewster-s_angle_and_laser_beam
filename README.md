@@ -17,7 +17,7 @@ The project provides a virtual demonstration of the experiment to make the under
 
 | Developer Details | Information |
 |:--|:--|
-| **Name of Developer** | Anand Kumar |
+| **Name of Developer** | Anand  |
 | **Institute** | Rajkiya Engineering College, Banda |
 <<<<<<< HEAD
 | **Email ID** | Your email address |
