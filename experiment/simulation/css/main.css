@@ -1,1 +1,297 @@
-/* You CSS goes in here */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f6fb;
+  color: #172b4d;
+  line-height: 1.5;
+}
+
+.topbar {
+  background: #17365d;
+  color: white;
+  padding: 25px 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.topbar h1 {
+  margin: 5px 0;
+  font-size: 30px;
+}
+
+.topbar p {
+  margin: 5px 0;
+  color: #d8e5f7;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.lab-badge {
+  border: 1px solid #8ca9d0;
+  border-radius: 20px;
+  padding: 8px 14px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(270px, 0.8fr);
+  gap: 20px;
+  max-width: 1500px;
+  padding: 22px;
+  margin: auto;
+}
+
+.panel {
+  background: white;
+  border: 1px solid #dbe3ed;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 22px;
+  min-width: 0;
+  box-shadow: 0 3px 12px rgba(23, 54, 93, 0.04);
+}
+
+.panel h2 {
+  color: #17365d;
+  margin: 0 0 6px;
+  font-size: 19px;
+}
+
+.panel p {
+  color: #64748b;
+}
+
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.panel-heading p {
+  margin: 5px 0 0;
+  font-size: 13px;
+}
+
+button {
+  border: 0;
+  background: #2563eb;
+  color: white;
+  border-radius: 7px;
+  padding: 11px 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.secondary-btn {
+  background: #e8eef7;
+  color: #17365d;
+}
+
+.secondary-btn:hover {
+  background: #dbe7f7;
+}
+
+.canvas-wrap {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #dbe3ed;
+  border-radius: 8px;
+  background: #fbfdff;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  margin-top: 15px;
+  font-size: 12px;
+  color: #475569;
+}
+
+.legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.red {
+  background: #ef4444;
+}
+
+.orange {
+  background: #f59e0b;
+}
+
+.blue {
+  background: #2563eb;
+}
+
+.grey {
+  background: #64748b;
+}
+
+.notice {
+  background: #eff6ff;
+  color: #1e40af;
+  border-left: 4px solid #2563eb;
+  border-radius: 5px;
+  padding: 12px;
+  margin-top: 18px;
+  font-size: 13px;
+}
+
+.controls label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 22px 0 10px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.controls input[type="range"] {
+  width: 100%;
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+.controls select {
+  display: block;
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  background: white;
+  color: #172b4d;
+}
+
+.result-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  padding: 13px;
+  background: #f8fafc;
+  border: 1px solid #dbe3ed;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.result-card strong {
+  color: #17365d;
+  font-size: 15px;
+  text-align: right;
+}
+
+.small-note {
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.observations,
+.theory {
+  width: calc(100% - 44px);
+  max-width: 1456px;
+  margin: 0 auto 22px;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th,
+td {
+  border: 1px solid #dbe3ed;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background: #eff4fa;
+  color: #17365d;
+}
+
+.formula {
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 7px;
+  background: #f1f6fd;
+  text-align: center;
+  color: #17365d;
+  font-family: Georgia, serif;
+  font-size: 19px;
+}
+
+@media (max-width: 850px) {
+  .layout {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  .observations,
+  .theory {
+    width: calc(100% - 24px);
+  }
+}
+
+@media (max-width: 500px) {
+  .topbar {
+    padding: 20px;
+  }
+
+  .topbar h1 {
+    font-size: 23px;
+  }
+
+  .lab-badge {
+    display: none;
+  }
+
+  .panel {
+    padding: 14px;
+  }
+
+  .panel-heading {
+    align-items: flex-start;
+  }
+}

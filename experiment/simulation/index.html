@@ -1,13 +1,142 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brewster's Angle Experiment</title>
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-	  This is my first Project of mini project using virtual lab
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">VIRTUAL PHYSICS LABORATORY</p>
+      <h1>Brewster's Angle & Laser Beam</h1>
+      <p>Study polarization of reflected light at a dielectric surface.</p>
+    </div>
+    <span class="lab-badge">OPTICS LAB</span>
+  </header>
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+  <main class="layout">
+    <section class="panel experiment-panel">
+      <div class="panel-heading">
+        <div>
+          <h2>Experimental Setup</h2>
+          <p>Adjust the incident angle and observe the rays.</p>
+        </div>
+        <button id="resetBtn" class="secondary-btn">Reset</button>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="experimentCanvas"
+          aria-label="Interactive laser and glass surface experiment"></canvas>
+      </div>
+
+      <div class="legend">
+        <span><i class="dot red"></i> Incident ray</span>
+        <span><i class="dot orange"></i> Reflected ray</span>
+        <span><i class="dot blue"></i> Refracted ray</span>
+        <span><i class="dot grey"></i> Normal</span>
+      </div>
+
+      <div class="notice" id="status">
+        Adjust the angle to begin the experiment.
+      </div>
+    </section>
+
+    <aside class="panel controls">
+      <h2>Experiment Controls</h2>
+
+      <label for="angleSlider">
+        Angle of incidence
+        <strong id="angleValue">56°</strong>
+      </label>
+      <input id="angleSlider" type="range"
+        min="0" max="89" step="1" value="56">
+
+      <label for="materialSelect">Second medium</label>
+      <select id="materialSelect">
+        <option value="1.33">Water (n = 1.33)</option>
+        <option value="1.50" selected>Glass (n = 1.50)</option>
+        <option value="1.52">Crown glass (n = 1.52)</option>
+        <option value="1.76">Flint glass (n = 1.76)</option>
+      </select>
+
+      <label for="polarization">Incident light polarization</label>
+      <select id="polarization">
+        <option value="p" selected>P-polarized</option>
+        <option value="s">S-polarized</option>
+      </select>
+
+      <div class="result-card">
+        <span>Brewster angle</span>
+        <strong id="brewsterValue">56.31°</strong>
+      </div>
+      <div class="result-card">
+        <span>Angle of reflection</span>
+        <strong id="reflectionValue">56°</strong>
+      </div>
+      <div class="result-card">
+        <span>Angle of refraction</span>
+        <strong id="refractionValue">33.7°</strong>
+      </div>
+      <div class="result-card">
+        <span>Reflected intensity</span>
+        <strong id="intensityValue">0.00%</strong>
+      </div>
+      <p class="small-note">
+        Intensity is calculated for ideal, uncoated dielectric media
+        at normal-free incidence, using Fresnel equations.
+      </p>
+    </aside>
+  </main>
+
+  <section class="panel observations">
+    <div class="panel-heading">
+      <div>
+        <h2>Observation Table</h2>
+        <p>Record measurements at different incident angles.</p>
+      </div>
+      <button id="recordBtn">Record reading</button>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Incidence (°)</th>
+            <th>Reflection (°)</th>
+            <th>Refraction (°)</th>
+            <th>Brewster angle (°)</th>
+            <th>Reflected intensity (%)</th>
+          </tr>
+        </thead>
+        <tbody id="observationBody">
+          <tr><td colspan="5">No readings recorded yet.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel theory">
+    <h2>Theory</h2>
+    <p>
+      At Brewster's angle, the reflected p-polarized component vanishes
+      for an ideal dielectric interface. The reflected and refracted
+      rays are perpendicular at this angle.
+    </p>
+    <div class="formula">
+      tan(θB) = n₂ / n₁
+    </div>
+    <div class="formula">
+      n₁ sin(θᵢ) = n₂ sin(θₜ)
+    </div>
+    <p>
+      Here, θB is Brewster's angle, θᵢ is the angle of incidence,
+      and θₜ is the angle of refraction. Angles are measured from
+      the normal.
+    </p>
+  </section>
+
+  <script src="./js/main.js"></script>
 </body>
 </html>
